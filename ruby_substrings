@@ -1,0 +1,20 @@
+
+#Project created for The Odin Project
+
+dictionary = ["odin", "pro"]
+
+def substrings(string, dictionary)
+  string = string.downcase.split(' ')
+  results = {}
+  for word in string
+    for entry in dictionary
+      if word.include? entry
+        results.include?(entry) ? results[entry] = results[entry] + 1 : results[entry] = 1
+      end
+    end
+  end
+p results
+end
+
+
+substrings("Isn't The Odin Project grand?", dictionary)
